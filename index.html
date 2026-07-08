@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>中信城 | 万亿央企·奉化品质标杆</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+            background: #0a1628;
+            color: #ffffff;
+            line-height: 1.6;
+            max-width: 750px;
+            margin: 0 auto;
+            overflow-x: hidden;
+        }
+        
+        img {
+            max-width: 100%;
+            display: block;
+        }
+        
+        /* 顶部封面 */
+        .hero {
+            position: relative;
+            height: 100vh;
+            background: url('https://aka.doubaocdn.com/s/etLK1wjtZc') center/cover no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            text-align: center;
+            padding: 0 30px 80px;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(180deg, rgba(10,22,40,0.3) 0%, rgba(10,22,40,0.6) 50%, rgba(10,22,40,0.95) 100%);
+        }
+        
+        .hero-badge {
+            position: relative;
+            z-index: 2;
+            font-size: 13px;
+            color: #d4af37;
+            letter-spacing: 3px;
+            margin-bottom: 16px;
+            border: 1px solid rgba(212,175,55,0.6);
+            padding: 6px 18px;
+            border-radius: 20px;
+            background: rgba(0,0,0,0.3);
+        }
+        
+        .hero-title {
+            position: relative;
+            z-index: 2;
+            font-size: 52px;
+            font-weight: bold;
+            color: #ffffff;
+            letter-spacing: 6px;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 20px rgba(0,0,0,0.5);
+        }
+        
+        .hero-title span {
+            color: #d4af37;
+        }
+        
+        .hero-subtitle {
+            position: relative;
+            z-index: 2;
+            font-size: 16px;
+            color: rgba(255,255,255,0.85);
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+        }
+        
+        .hero-tags {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .hero-tag {
+            background: rgba(212,175,55,0.2);
+            border: 1px solid rgba(212,175,55,0.5);
+            color: #d4af37;
+            padding: 7px 14px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+        
+        .scroll-hint {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: rgba(255,255,255,0.5);
+            font-size: 11px;
+            animation: bounce 2s infinite;
+            z-index: 2;
+        }
+        
+        .scroll-hint::after {
+            content: '';
+            display: block;
+            width: 1px;
+            height: 25px;
+            background: linear-gradient(to bottom, rgba(212,175,55,0.8), transparent);
+            margin: 6px auto 0;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(8px); }
+        }
+        
+        /* 补贴横幅 */
+        .countdown-banner {
+            background: linear-gradient(90deg, #c41e3a 0%, #d4af37 100%);
+            padding: 14px 20px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 14px;
+            letter-spacing: 1px;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.85; }
+        }
+        
+        /* 通用模块样式 */
+        .section {
+            padding: 50px 20px;
+            position: relative;
+        }
+        
+        .section-alt {
+            background: linear-gradient(180deg, #0a1628 0%, #0d1f3c 50%, #0a1628 100%);
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .section-num {
+            font-size: 12px;
+            color: #d4af37;
+            letter-spacing: 3px;
+            margin-bottom: 6px;
+            opacity: 0.8;
+        }
+        
+        .section-title {
+            font-size: 26px;
+            font-weight: bold;
+            color: #ffffff;
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 36px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #d4af37, transparent);
+        }
+        
+        .section-desc {
+            font-size: 13px;
+            color: rgba(255,255,255,0.6);
+            margin-top: 14px;
+        }
+        
+        .section-img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+        }
+        
+        .img-caption {
+            text-align: center;
+            font-size: 12px;
+            color: rgba(255,255,255,0.5);
+            margin-top: -12px;
+            margin-bottom: 20px;
+        }
+        
+        /* PART 01 热销见证 */
+        .hot-card {
+            background: linear-gradient(135deg, rgba(212,175,55,0.1) 0%, rgba(212,175,55,0.03) 100%);
+            border: 1px solid rgba(212,175,55,0.3);
+            border-radius: 12px;
+            padding: 22px;
+            margin-bottom: 18px;
+        }
+        
+        .hot-card-title {
+            font-size: 17px;
+            font-weight: bold;
+            color: #d4af37;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .hot-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+        
+        .hot-stat-item {
+            text-align: center;
+            background: rgba(0,0,0,0.2);
+            padding: 14px 8px;
+            border-radius: 8px;
+        }
+        
+        .hot-stat-num {
+            font-size: 24px;
+            font-weight: bold;
+            color: #d4af37;
+            line-height: 1.2;
+        }
+        
+        .hot-stat-label {
+            font-size: 11px;
+            color: rgba(255,255,255,0.6);
+            margin-top: 4px;
+        }
+        
+        .hot-text {
+            font-size: 13px;
+            color: rgba(255,255,255,0.85);
+            line-height: 1.9;
+        }
+        
+        .hot-text p {
+            margin-bottom: 8px;
+        }
+        
+        .highlight {
+            color: #d4af37;
+            font-weight: 500;
+        }
+        
+        .golden-egg-area {
+            background: linear-gradient(135deg, #1a2f52 0%, #0d1f3c 100%);
+            border-radius: 12px;
+            padding: 22px;
+            text-align: center;
+            border: 1px solid rgba(212,175,55,0.2);
+        }
+        
+        .egg-visual {
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 14px;
+        }
+        
+        .egg {
+            width: 55px;
+            height: 75px;
+            background: linear-gradient(135deg, #ffd700 0%, #d4af37 50%, #b8860b 100%);
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            box-shadow: 0 4px 15px rgba(212,175,55,0.4), inset -5px -5px 15px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        
+        .egg:nth-child(1) { transform: scale(0.8); opacity: 0.7; z-index: 1; }
+        .egg:nth-child(2) { transform: scale(1.1); z-index: 3; margin: 0 -8px; }
+        .egg:nth-child(3) { transform: scale(0.8); opacity: 0.7; z-index: 1; }
+        
+        .egg-title {
+            font-size: 15px;
+            font-weight: bold;
+            color: #d4af37;
+            margin-bottom: 6px;
+        }
+        
+        .egg-desc {
+            font-size: 12px;
+            color: rgba(255,255,255,0.7);
+            line-height: 1.6;
+        }
+        
+        /* PART 02 核心参数 */
+        .params-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .param-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(212,175,55,0.2);
+            border-radius: 10px;
+            padding: 18px 12px;
+            text-align: center;
+        }
+        
+        .param-value {
+            font-size: 20px;
+            font-weight: bold;
+            color: #d4af37;
+            margin-bottom: 4px;
+        }
+        
+        .param-label {
+            font-size: 12px;
+            color: rgba(255,255,255,0.6);
+        }
+        
+        .craft-box {
+            margin-top: 20px;
+            background: linear-gradient(135deg, rgba(212,175,55,0.08) 0%, transparent 100%);
+            border-left: 3px solid #d4af37;
+            padding: 18px;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .craft-title {
+            font-size: 15px;
+            font-weight: bold;
+            color: #d4af37;
+            margin-bottom: 10px;
+        }
+        
+        .craft-list {
+            list-style: none;
+            font-size: 13px;
+            color: rgba(255,255,255,0.8);
+        }
+        
+        .craft-list li {
+            padding: 5px 0;
+            padding-left: 18px;
+            position: relative;
+        }
+        
+        .craft-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #d4af37;
+            font-weight: bold;
+        }
+        
+        /* PART 03 项目简介 */
+        .intro-text {
+            font-size: 14px;
+            color: rgba(255,255,255,0.85);
+            line-height: 2;
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+        
+        .intro-highlight {
+            color: #d4af37;
+            font-weight: 500;
+        }
+        
+        .landscape-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 16px;
+            margin-bottom: 20px;
+        }
+        
+        .landscape-tag {
+            background: rgba(212,175,55,0.1);
+            border: 1px solid rgba(212,175,55,0.3);
+            color: #d4af37;
+            padding: 7px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+        }
+        
+        .img-row-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .img-row-2 img {
+            border-radius: 8px;
+            height: 140px;
+            object-fit: cover;
+            width: 100%;
+        }
+        
+        .real-badge {
+            display: inline-block;
+            background: #d4af37;
+            color: #0a1628;
+            font-size: 10px;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        
+        /* PART 04 周边配套 */
+        .facility-category {
+            margin-bottom: 24px;
+        }
+        
+        .facility-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+        
+        .facility-icon {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, #d4af37 0%, #b8860b 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+        
+        .facility-title {
+            font-size: 17px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+        
+        .facility-items {
+            background: rgba(255,255,255,0.03);
+            border-radius: 10px;
+            padding: 14px;
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+        
+        .facility-item {
+            font-size: 13px;
+            color: rgba(255,255,255,0.8);
+            padding: 5px 0;
+            padding-left: 14px;
+            position: relative;
+        }
+        
+        .facility-item::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #d4af37;
+        }
+        
+        .facility-item strong {
+            color: #d4af37;
+            font-weight: 500;
+        }
+        
+        .facility-img {
+            width: 100%;
+            border-radius: 8px;
+            margin-top: 12px;
+        }
+        
+        .facility-img-caption {
+            text-align: center;
+            font-size: 11px;
+            color: rgba(255,255,255,0.5);
+            margin-top: 6px;
+        }
+        
+        /* PART 05/06 户型 */
+        .house-type-card {
+            background: linear-gradient(135deg, #1a2f52 0%, #0d1f3c 100%);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 18px;
+            border: 1px solid rgba(212,175,55,0.2);
+        }
+        
+        .house-type-header {
+            text-align: center;
+            margin-bottom: 16px;
+            padding-bottom: 14px;
+            border-bottom: 1px solid rgba(212,175,55,0.2);
+        }
+        
+        .house-area {
+            font-size: 22px;
+            font-weight: bold;
+            color: #d4af37;
+        }
+        
+        .house-pattern {
+            font-size: 13px;
+            color: rgba(255,255,255,0.6);
+            margin-top: 4px;
+        }
+        
+        .house-plan-img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 16px;
+            background: #fff;
+        }
+        
+        .house-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        
+        .house-feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 6px;
+            font-size: 12px;
+            color: rgba(255,255,255,0.8);
+        }
+        
+        .house-feature::before {
+            content: '◆';
+            color: #d4af37;
+            font-size: 9px;
+            margin-top: 3px;
+            flex-shrink: 0;
+        }
+        
+        .sample-img-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-top: 16px;
+        }
+        
+        .sample-img-grid img {
+            width: 100%;
+            border-radius: 6px;
+            height: 100px;
+            object-fit: cover;
+        }
+        
+        /* PART 07 七大场景 */
+        .scenes-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        
+        .scene-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(212,175,55,0.2);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .scene-img {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+        }
+        
+        .scene-content {
+            padding: 12px 10px;
+            text-align: center;
+        }
+        
+        .scene-name {
+            font-size: 13px;
+            font-weight: 500;
+            color: #ffffff;
+            margin-bottom: 4px;
+        }
+        
+        .scene-desc {
+            font-size: 11px;
+            color: rgba(255,255,255,0.5);
+            line-height: 1.4;
+        }
+        
+        /* PART 08 开发商 */
+        .developer-card {
+            background: linear-gradient(135deg, rgba(212,175,55,0.1) 0%, rgba(212,175,55,0.02) 100%);
+            border: 1px solid rgba(212,175,55,0.3);
+            border-radius: 12px;
+            padding: 24px 20px;
+            text-align: center;
+        }
+        
+        .developer-logo {
+            font-size: 32px;
+            font-weight: bold;
+            color: #d4af37;
+            letter-spacing: 3px;
+            margin-bottom: 12px;
+        }
+        
+        .developer-slogan {
+            font-size: 14px;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+        
+        .developer-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+        
+        .dev-stat-item {
+            padding: 14px 8px;
+            background: rgba(0,0,0,0.2);
+            border-radius: 8px;
+        }
+        
+        .dev-stat-num {
+            font-size: 22px;
+            font-weight: bold;
+            color: #d4af37;
+            line-height: 1.2;
+        }
+        
+        .dev-stat-label {
+            font-size: 11px;
+            color: rgba(255,255,255,0.6);
+            margin-top: 4px;
+        }
+        
+        .developer-desc {
+            font-size: 12px;
+            color: rgba(255,255,255,0.7);
+            line-height: 1.8;
+            text-align: left;
+        }
+        
+        .developer-desc p {
+            margin-bottom: 8px;
+        }
+        
+        /* 底部 */
+        .footer {
+            padding: 40px 20px 50px;
+            text-align: center;
+            background: linear-gradient(180deg, #0a1628 0%, #050d18 100%);
+        }
+        
+        .footer-title {
+            font-size: 20px;
+            color: #d4af37;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .footer-subtitle {
+            font-size: 13px;
+            color: rgba(255,255,255,0.6);
+            margin-bottom: 24px;
+        }
+        
+        .footer-address {
+            font-size: 12px;
+            color: rgba(255,255,255,0.5);
+            line-height: 1.8;
+        }
+        
+        .footer-divider {
+            width: 50px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #d4af37, transparent);
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- 顶部封面：百万方大城鸟瞰图 -->
+    <section class="hero">
+        <div class="hero-badge">万亿央企 · 精工筑造</div>
+        <h1 class="hero-title">中<span>信</span>城</h1>
+        <p class="hero-subtitle">宁波南 · 百万方城市级标杆作品</p>
+        <div class="hero-tags">
+            <span class="hero-tag">央企开发</span>
+            <span class="hero-tag">全封阳台</span>
+            <span class="hero-tag">绿城物业</span>
+            <span class="hero-tag">实景可鉴</span>
+        </div>
+        <div class="scroll-hint">
+            向下滑动查看详情
+        </div>
+    </section>
+
+    <!-- 补贴提醒 -->
+    <div class="countdown-banner">
+        ⚡ 购房补贴倒计时 · 错过再无 ⚡
+    </div>
+
+    <!-- PART 01：火爆热销 -->
+    <section class="section section-alt">
+        <div class="section-header">
+            <div class="section-num">PART 01</div>
+            <h2 class="section-title">火爆热销</h2>
+            <p class="section-desc">客户见证 · 每周去化20-30套</p>
+        </div>
+        
+        <div class="hot-card">
+            <div class="hot-card-title">🔥 全城竞藏 · 客户高度认可</div>
+            <div class="hot-stats">
+                <div class="hot-stat-item">
+                    <div class="hot-stat-num">20-30</div>
+                    <div class="hot-stat-label">周均成交（套）</div>
+                </div>
+                <div class="hot-stat-item">
+                    <div class="hot-stat-num">1/3</div>
+                    <div class="hot-stat-label">主城价格</div>
+                </div>
+                <div class="hot-stat-item">
+                    <div class="hot-stat-num">TOP1</div>
+                    <div class="hot-stat-label">奉化性价比</div>
+                </div>
+            </div>
+            <div class="hot-text">
+                <p>目前项目卖得非常快，很多<span class="highlight">海曙、鄞州、江北</span>客户专程过来，认可度极高。</p>
+                <p>✅ <span class="highlight">地段优越</span>：配套齐全，生活便利</p>
+                <p>✅ <span class="highlight">价格洼地</span>：距海曙鄞州核心仅十余分钟车程，价格仅市区三分之一</p>
+                <p>看房客户多，成交更多，是<span class="highlight">奉化品质最高端、性价比最高</span>的楼盘！</p>
+            </div>
+        </div>
+        
+        <div class="golden-egg-area">
+            <div class="egg-visual">
+                <div class="egg"></div>
+                <div class="egg"></div>
+                <div class="egg"></div>
+            </div>
+            <div class="egg-title">成交砸金蛋 · 锤锤有惊喜</div>
+            <p class="egg-desc">每位成功认购业主均可参与砸金蛋活动<br>好礼不断，喜迎幸福家</p>
+        </div>
+    </section>
+
+    <!-- PART 02：核心参数 + 楼栋分布图 -->
+    <section class="section">
+        <div class="section-header">
+            <div class="section-num">PART 02</div>
+            <h2 class="section-title">核心参数</h2>
+            <p class="section-desc">中信城 · 基础信息一览</p>
+        </div>
+        
+        <!-- 楼栋分布图 -->
+        <img src="https://aka.doubaocdn.com/s/dte01wjtZc" alt="中信城楼栋分布图" class="section-img">
+        
+        <div class="params-grid">
+            <div class="param-card">
+                <div class="param-value">约23万㎡</div>
+                <div class="param-label">总建筑面积</div>
+            </div>
+            <div class="param-card">
+                <div class="param-value">约7万㎡</div>
+                <div class="param-label">总占地面积</div>
+            </div>
+            <div class="param-card">
+                <div class="param-value">1553户</div>
+                <div class="param-label">总户数</div>
+            </div>
+            <div class="param-card">
+                <div class="param-value">2.4</div>
+                <div class="param-label">容积率</div>
+            </div>
+            <div class="param-card">
+                <div class="param-value">30%</div>
+                <div class="param-label">绿化率</div>
+            </div>
+            <div class="param-card">
+                <div class="param-value">绿城物业</div>
+                <div class="param-label">物业服务</div>
+            </div>
+        </div>
+        
+        <div class="craft-box">
+            <div class="craft-title">🏗️ 精工匠心 · 国匠品质</div>
+            <ul class="craft-list">
+                <li>全封闭阳台交付，超越国家规范标准</li>
+                <li>钢木复合入户门，彰显归家仪式感</li>
+                <li>精装入户大堂，不惜成本提升品质</li>
+                <li>超宽楼间距，户户采光通风俱佳</li>
+                <li>央企精工品质，打造高规格人居作品</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- PART 03：项目简介 + 实景图 -->
+    <section class="section section-alt">
+        <div class="section-header">
+            <div class="section-num">PART 03</div>
+            <h2 class="section-title">项目简介</h2>
+            <p class="section-desc">中信进驻宁波首个项目 · 实景可鉴</p>
+        </div>
+        
+        <!-- 小区实景图（新增） -->
+        <span class="real-badge">📷 社区实景拍摄</span>
+        <img src="https://aka.doubaocdn.com/s/Bf6b1wjuiB" alt="中信城社区实景草坪" class="section-img">
+        
+        <div class="intro-text">
+            <p><span class="intro-highlight">中信城</span>是中信进驻宁波的首个项目，精心筑建小区品质，作为<span class="intro-highlight">区域性标杆</span>打造。</p>
+            <p>不论首次置业还是改善居住，<span class="intro-highlight">全龄化臻惜社区</span>都非常合适，品质高端，住得舒心！</p>
+            <p>利用高层建筑间距形成<span class="intro-highlight">组团级景观花园</span>，分级设置，尺度宜人，充分考虑景观均好性。</p>
+        </div>
+        
+        <div class="landscape-tags">
+            <span class="landscape-tag">🏃 健康跑道</span>
+            <span class="landscape-tag">👶 儿童活动区</span>
+            <span class="landscape-tag">👴 老人健身场</span>
+            <span class="landscape-tag">🌳 组团花园</span>
+            <span class="landscape-tag">💬 邻里交流</span>
+            <span class="landscape-tag">🏠 全龄社区</span>
+        </div>
+        
+        <!-- 双实景图：水景草坪 + 沿河透视（新增实景替换） -->
+        <div class="img-row-2">
+            <div>
+                <img src="https://aka.doubaocdn.com/s/zp4J1wjuiB" alt="小区水景实景">
+                <p class="facility-img-caption">社区中央水景 · 实景</p>
+            </div>
+            <div>
+                <img src="https://aka.doubaocdn.com/s/S7Cg1wjtZc" alt="沿河景观">
+                <p class="facility-img-caption">沿河绿带景观</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PART 04：周边配套 + 配套图 + 实景图 -->
+    <section class="section">
+        <div class="section-header">
+            <div class="section-num">PART 04</div>
+            <h2 class="section-title">周边配套</h2>
+            <p class="section-desc">交通·商业·学区·医疗·景区 全能配套</p>
+        </div>
+        
+        <!-- 双核心配套图 -->
+        <img src="https://aka.doubaocdn.com/s/DRIv1wjtZc" alt="双核心配套" class="section-img">
+        
+        <div class="facility-category">
+            <div class="facility-header">
+                <div class="facility-icon">🚇</div>
+                <div class="facility-title">交通配套</div>
+            </div>
+            <div class="facility-items">
+                <div class="facility-item"><strong>地铁3号线</strong>南渡站，4站直达鄞州区</div>
+                <div class="facility-item"><strong>地铁9号线</strong>（在建中），接轨宁波主城</div>
+                <div class="facility-item">公交：217/227/988/989路环绕</div>
+                <div class="facility-item">四明路快速接驳机场高架，半小时达宁波主城</div>
+            </div>
+            <img src="https://aka.doubaocdn.com/s/DOVX1wjtZc" alt="交通规划" class="facility-img">
+        </div>
+        
+        <div class="facility-category">
+            <div class="facility-header">
+                <div class="facility-icon">🛍️</div>
+                <div class="facility-title">商业配套</div>
+            </div>
+            <div class="facility-items">
+                <div class="facility-item">万达广场、银泰百货、大润发、太平洋购物广场</div>
+                <div class="facility-item">各大银行、酒店、餐饮等成熟商圈环绕</div>
+                <div class="facility-item">宋都投资建设商业（在建）</div>
+                <div class="facility-item">项目西侧商业用地规划，未来购物更便捷</div>
+            </div>
+            <!-- 新增：万达广场实景 + 老城商圈实景 -->
+            <div class="img-row-2" style="margin-top: 12px;">
+                <div>
+                    <img src="https://aka.doubaocdn.com/s/4DKn1wjuiB" alt="万达广场实景" style="height: 120px;">
+                    <p class="facility-img-caption">万达广场 · 实景</p>
+                </div>
+                <div>
+                    <img src="https://aka.doubaocdn.com/s/E5vv1wjuiB" alt="老城商圈实景" style="height: 120px;">
+                    <p class="facility-img-caption">老城成熟商圈 · 实景</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="facility-category">
+            <div class="facility-header">
+                <div class="facility-icon">🎓</div>
+                <div class="facility-title">学区配套</div>
+            </div>
+            <div class="facility-items">
+                <div class="facility-item"><strong>小区自带幼儿园</strong>——家门口一站式教育</div>
+                <div class="facility-item">萧王庙幼儿园、萧王庙中心小学</div>
+                <div class="facility-item"><strong>百年老校——奉化实验中学</strong></div>
+                <div class="facility-item">项目北侧规划中小学教育用地</div>
+                <div class="facility-item">诺德安达国际双语学校（私立）</div>
+                <div class="facility-item">浙江医药高等专科学校（本科）</div>
+            </div>
+            <img src="https://aka.doubaocdn.com/s/7S1y1wjtZc" alt="奉化高教区" class="facility-img">
+        </div>
+        
+        <div class="facility-category">
+            <div class="facility-header">
+                <div class="facility-icon">🏥</div>
+                <div class="facility-title">医疗配套</div>
+            </div>
+            <div class="facility-items">
+                <div class="facility-item">奉化中医院、奉化人民医院</div>
+                <div class="facility-item">爱伊美医院</div>
+                <div class="facility-item"><strong>投资超25亿新人民医院</strong>（在建）</div>
+            </div>
+        </div>
+        
+        <div class="facility-category">
+            <div class="facility-header">
+                <div class="facility-icon">🏞️</div>
+                <div class="facility-title">景区&生态配套</div>
+            </div>
+            <div class="facility-items">
+                <div class="facility-item">项目南侧2km——<strong>5A级滕头生态旅游景区</strong></div>
+                <div class="facility-item">8km——天下第一桃园</div>
+                <div class="facility-item">15km——<strong>5A级溪口旅游景区</strong></div>
+                <div class="facility-item">仁湖公园、五龙潭风景区、四明山国家森林公园</div>
+            </div>
+            <!-- 新增：仁湖公园实景九宫格 -->
+            <img src="https://aka.doubaocdn.com/s/UUrJ1wjuiB" alt="仁湖公园实景" class="facility-img" style="margin-top: 12px;">
+            <p class="facility-img-caption">仁湖公园 · 周边生态配套实景</p>
+        </div>
+        
+        <!-- 5大城市资源规划图 -->
+        <img src="https://aka.doubaocdn.com/s/XfHW1wjtZc" alt="5大城市资源" class="section-img" style="margin-top: 10px;">
+    </section>
+
+    <!-- PART 05：主力户型 95-105 + 户型图 + 样板间 -->
+    <section class="section section-alt">
+        <div class="section-header">
+            <div class="section-num">PART 05</div>
+            <h2 class="section-title">主力户型</h2>
+            <p class="section-desc">95-105㎡ 舒适三房 · 全明通透</p>
+        </div>
+        
+        <!-- 三户型合集图 -->
+        <img src="https://aka.doubaocdn.com/s/ElCv1wjtZc" alt="主力户型图" class="section-img">
+        
+        <div class="house-type-card">
+            <div class="house-type-header">
+                <div class="house-area">95㎡ B户型</div>
+                <div class="house-pattern">3室2厅2卫 · 刚需爆款</div>
+            </div>
+            <div class="house-features">
+                <div class="house-feature">南向三开间，采光充裕</div>
+                <div class="house-feature">方正户型，全明格局</div>
+                <div class="house-feature">餐客一体，延伸空间感</div>
+                <div class="house-feature">主卧套房，私密居家</div>
+                <div class="house-feature">双联阳台，瞰景视野</div>
+                <div class="house-feature">独立书房，闲适身心</div>
+            </div>
+        </div>
+        
+        <div class="house-type-card">
+            <div class="house-type-header">
+                <div class="house-area">100㎡ F户型</div>
+                <div class="house-pattern">3室2厅2卫 · 经典三房</div>
+            </div>
+            <div class="house-features">
+                <div class="house-feature">南北通透，视野开阔</div>
+                <div class="house-feature">布局合理，空间利用率高</div>
+                <div class="house-feature">U型厨房，烹饪动线有序</div>
+                <div class="house-feature">主卧飘窗，浪漫惬意</div>
+                <div class="house-feature">动静分区，生活有序</div>
+                <div class="house-feature">双卫设计，从容起居</div>
+            </div>
+        </div>
+        
+        <div class="house-type-card">
+            <div class="house-type-header">
+                <div class="house-area">105㎡ A户型</div>
+                <div class="house-pattern">3室2厅2卫 · 舒适升级</div>
+            </div>
+            <!-- 单户型大图 -->
+            <img src="https://aka.doubaocdn.com/s/xZWt1wjtZc" alt="105平户型图" class="house-plan-img">
+            <div class="house-features">
+                <div class="house-feature">南向三开间，宽境生活</div>
+                <div class="house-feature">方正格局，采光充盈</div>
+                <div class="house-feature">餐客一体，彰显气度</div>
+                <div class="house-feature">主卧套房，独立卫浴</div>
+                <div class="house-feature">宽景阳台，四季风华</div>
+                <div class="house-feature">幽静书房，悠然惬意</div>
+            </div>
+            
+            <!-- 样板间实景图 4张 -->
+            <div class="sample-img-grid">
+                <img src="https://aka.doubaocdn.com/s/GNAL1wjtZc" alt="客厅样板间">
+                <img src="https://aka.doubaocdn.com/s/uWTq1wjtZc" alt="主卧样板间">
+                <img src="https://aka.doubaocdn.com/s/l5Hf1wjtZc" alt="卫生间样板间">
+                <img src="https://aka.doubaocdn.com/s/2R2d1wjtZc" alt="餐厅样板间">
+            </div>
+        </div>
+    </section>
+
+    <!-- PART 06：改善大平层 120-135 + 大户型样板间 -->
+    <section class="section">
+        <div class="section-header">
+            <div class="section-num">PART 06</div>
+            <h2 class="section-title">改善大平层</h2>
+            <p class="section-desc">120-135㎡ 宽境四房 · 一步到位</p>
+        </div>
+        
+        <div class="house-type-card">
+            <div class="house-type-header">
+                <div class="house-area">120㎡ C户型</div>
+                <div class="house-pattern">4室2厅2卫 · 改善首选</div>
+            </div>
+            <div class="house-features">
+                <div class="house-feature">入户玄关，尊崇礼序</div>
+                <div class="house-feature">南向三开间，通透视野</div>
+                <div class="house-feature">U型厨房，动线合理</div>
+                <div class="house-feature">主卧步入式衣帽间</div>
+                <div class="house-feature">阔绰阳台，清风阳光</div>
+                <div class="house-feature">独立书房，私享天地</div>
+            </div>
+            
+            <!-- 大户型样板间 -->
+            <div class="sample-img-grid" style="margin-top: 16px;">
+                <img src="https://aka.doubaocdn.com/s/QVKh1wjtZc" alt="大客厅">
+                <img src="https://aka.doubaocdn.com/s/yTm71wjtZc" alt="客餐厅">
+                <img src="https://aka.doubaocdn.com/s/nb1N1wjtZc" alt="儿童房">
+                <img src="https://aka.doubaocdn.com/s/S8sf1wjtZc" alt="主卫">
+            </div>
+        </div>
+        
+        <div class="house-type-card">
+            <div class="house-type-header">
+                <div class="house-area">135㎡ 楼王户型</div>
+                <div class="house-pattern">4室2厅2卫 · 奢阔大平层</div>
+            </div>
+            <div class="house-features">
+                <div class="house-feature">四开间朝南，极致采光</div>
+                <div class="house-feature">横厅设计，大气排场</div>
+                <div class="house-feature">南北通透，穿堂清风</div>
+                <div class="house-feature">豪华主卧套房</div>
+                <div class="house-feature">超大观景阳台</div>
+                <div class="house-feature">三代同堂，一步到位</div>
+            </div>
+            
+            <!-- 大平层样板间 -->
+            <div class="sample-img-grid" style="margin-top: 16px;">
+                <img src="https://aka.doubaocdn.com/s/ITUs1wjtZc" alt="豪华客厅">
+                <img src="https://aka.doubaocdn.com/s/GW6k1wjtZc" alt="中西厨">
+                <img src="https://aka.doubaocdn.com/s/GtPi1wjtZc" alt="客厅全景">
+                <img src="https://aka.doubaocdn.com/s/d7tR1wjtZc" alt="入户玄关">
+            </div>
+        </div>
+    </section>
+
+    <!-- PART 07：七大生活场景（新增实景图） -->
+    <section class="section section-alt">
+        <div class="section-header">
+            <div class="section-num">PART 07</div>
+            <h2 class="section-title">七大生活场景</h2>
+            <p class="section-desc">全龄化社区 · 极致品质体验</p>
+        </div>
+        
+        <div class="scenes-grid">
+            <div class="scene-card">
+                <img src="https://aka.doubaocdn.com/s/cmhz1wjtZc" alt="尊崇入户" class="scene-img">
+                <div class="scene-content">
+                    <div class="scene-name">尊崇入户</div>
+                    <div class="scene-desc">精装大堂 钢木复合门</div>
+                </div>
+            </div>
+            <div class="scene-card">
+                <img src="https://aka.doubaocdn.com/s/zp4J1wjuiB" alt="中央花园实景" class="scene-img">
+                <div class="scene-content">
+                    <div class="scene-name">中央花园</div>
+                    <div class="scene-desc">实景呈现 四季有景</div>
+                </div>
+            </div>
+            <div class="scene-card">
+                <img src="https://aka.doubaocdn.com/s/nb1N1wjtZc" alt="童梦乐园" class="scene-img">
+                <div class="scene-content">
+                    <div class="scene-name">童梦乐园</div>
+                    <div class="scene-desc">分龄设计 安全趣味</div>
+                </div>
+            </div>
+            <div class="scene-card">
+                <img src="https://aka.doubaocdn.com/s/S7Cg1wjtZc" alt="健康跑道" class="scene-img">
+                <div class="scene-content">
+                    <div class="scene-name">健康跑道</div>
+                    <div class="scene-desc">夜光跑道 随心畅跑</div>
+                </div>
+            </div>
+            <div class="scene-card">
+                <img src="https://aka.doubaocdn.com/s/GNAL1wjtZc" alt="精装空间" class="scene-img">
+                <div class="scene-content">
+                    <div class="scene-name">精工空间</div>
+                    <div class="scene-desc">全封阳台 品质交付</div>
+                </div>
+            </div>
+            <div class="scene-card">
+                <img src="https://aka.doubaocdn.com/s/OxWo1wjtZc" alt="智慧安防" class="scene-img">
+                <div class="scene-content">
+                    <div class="scene-name">智慧安防</div>
+                    <div class="scene-desc">绿城物业 24h守护</div>
+                </div>
+            </div>
+            <div class="scene-card">
+                <img src="https://aka.doubaocdn.com/s/Bf6b1wjuiB" alt="阳光草坪实景" class="scene-img">
+                <div class="scene-content">
+                    <div class="scene-name">阳光草坪</div>
+                    <div class="scene-desc">实景可鉴 绿意盎然</div>
+                </div>
+            </div>
+            <div class="scene-card">
+                <img src="https://aka.doubaocdn.com/s/gXgO1wjtZc" alt="滨水生活" class="scene-img">
+                <div class="scene-content">
+                    <div class="scene-name">滨水生活</div>
+                    <div class="scene-desc">沿河绿带 诗意栖居</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PART 08：开发商介绍 -->
+    <section class="section">
+        <div class="section-header">
+            <div class="section-num">PART 08</div>
+            <h2 class="section-title">中信集团</h2>
+            <p class="section-desc">万亿央企 · 保交付保品质</p>
+        </div>
+        
+        <img src="https://aka.doubaocdn.com/s/etLK1wjtZc" alt="中信城开百万方大城" class="section-img">
+        
+        <div class="developer-card">
+            <div class="developer-logo">CITIC 中信</div>
+            <div class="developer-slogan">万亿央企背书 · 购买信心保障</div>
+            
+            <div class="developer-stats">
+                <div class="dev-stat-item">
+                    <div class="dev-stat-num">第62位</div>
+                    <div class="dev-stat-label">2022年世界500强</div>
+                </div>
+                <div class="dev-stat-item">
+                    <div class="dev-stat-num">17年</div>
+                    <div class="dev-stat-label">连续上榜世界500强</div>
+                </div>
+                <div class="dev-stat-item">
+                    <div class="dev-stat-num">30+城</div>
+                    <div class="dev-stat-label">全国战略布局</div>
+                </div>
+                <div class="dev-stat-item">
+                    <div class="dev-stat-num">3000万㎡+</div>
+                    <div class="dev-stat-label">开发体量</div>
+                </div>
+            </div>
+            
+            <div class="developer-desc">
+                <p>🏛️ <strong style="color:#d4af37">国务院直属正部级央企</strong>——我国正部级央企仅有三家，中信为其中之一。</p>
+                <p>🏗️ 中国城市综合开发运营商，聚焦城市更新改造和多功能开发运营，实力强劲。</p>
+                <p>🏆 战略布局全国30+城市，打造近百个城市综合开发项目，开发超3000万平方米。</p>
+                <p>✨ 中信城开，中信集团旗下新型城镇化业务旗舰平台，以央企担当铸就品质人居。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 底部 -->
+    <footer class="footer">
+        <div class="footer-title">中信城</div>
+        <div class="footer-subtitle">宁波南 · 央企精工 · 全龄品质住区</div>
+        <div class="footer-divider"></div>
+        <div class="footer-address">
+            项目推广名：中信城<br>
+            备案名：云聚信湾一区<br>
+            地址：宁波奉化区南山路与四明路交叉口
+        </div>
+        <div class="footer-divider"></div>
+        <div style="font-size:10px; color:rgba(255,255,255,0.3);">
+            本资料仅供参考，最终以政府审批及合同约定为准
+        </div>
+    </footer>
+
+</body>
+</html>
